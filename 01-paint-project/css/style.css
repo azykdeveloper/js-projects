@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1080px;
+}
+
+.drawing-board {
+  flex: 1;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tools-board {
+  flex: 0 0 280px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 15px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tools-board .row {
+  margin-bottom: 20px;
+}
+
+.tools-board .row .options {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+
+.tools-board .row .options .option {
+  display: flex;
+  cursor: pointer;
+  color: #505050;
+  font-size: 14px;
+  align-items: center;
+  user-select: none;
+}
+
+.tool {
+  margin-bottom: 10px;
+}
+
+.option :where(span, label) {
+  cursor: pointer;
+  padding-left: 10px;
+  user-select: none;
+}
+
+.tools-board .row .options .option #fill-color {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+
+.option:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option:is(:hover, .active) label {
+  color: #008fe2;
+}
+
+#size-slider {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #008fe2;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #008fe2;
+  cursor: pointer;
+}
+
+.colors .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors .options .option {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  border-radius: 50%;
+}
+
+.colors .options .option.selected::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  height: 25px;
+  width: 25px;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+  border: 2px solid #000000;
+  
+}
+
+
+.colors .options .option:nth-child(1) {
+  background: black;
+}
+.colors .options .option:nth-child(2) {
+  background: red;
+}
+.colors .options .option:nth-child(3) {
+  background: green;
+}
+.colors .options .option:nth-child(4) {
+  background: blue;
+}
+.colors .options .option:nth-child(5) {
+  background: orange;
+}
+.colors .options .option:nth-child(6) {
+  background: yellow;
+}
+.colors .options .option:nth-child(7) {
+  background: pink;
+}
+
+#color-picker {
+  margin-top: 10px;
+}
+
+
+
+.clear-canvas{
+  background: #ffffff;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #333;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.save-image {
+  background: #008fe2;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.save-image {
+  margin-left: 10px;
+}
+
+.undo, .redo {
+  border: none;
+  background: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.redoUndo img {
+  width: 20px;
+}
+
+

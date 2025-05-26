@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azizbek | Paint</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+      <section class="tools-board">
+        <div class="row">
+          <h4 class="title">Fon rasmi</h4>
+          <input type="file" id="bg-image-picker" accept="image/*" />
+        </div>
+        <div class="row">
+          <h4 class="title">Shakllar</h4>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <img src="icons/rectangle.svg" alt="rectangle" />
+              <label for="rectangle">To'rtburchak</label>
+            </li>
+            <li class="option tool" id="circle">
+              <img src="icons/circle.svg" alt="circle" />
+              <label for="circle">Doira</label>
+            </li>
+            <li class="option tool" id="triangle">
+              <img src="icons/triangle.svg" alt="triangle" />
+              <label for="triangle">Uchburchak</label>
+            </li>
+            <li class="option tool" id="fill-color">
+              <input type="checkbox" />
+              <label for="fill-color">Rangni to'ldirish</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <h4 class="title">Variantlar</h4>
+
+          <ul class="options">
+            <li class="option tool active" id="brush">
+              <img src="icons/brush.svg" alt="brush" />
+              <label for="brush">Chizish</label>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="icons/eraser.svg" alt="eraser" />
+              <label for="eraser">O'chirish</label>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="row colors">
+          <h4 class="title">Ranglar</h4>
+
+          <ul class="options">
+            <li class="option selected" id="black"></li>
+            <li class="option" id="red"></li>
+            <li class="option" id="green"></li>
+            <li class="option" id="blue"></li>
+            <li class="option" id="orange"></li>
+            <li class="option" id="yellow"></li>
+            <li class="option" id="pink"></li>
+          </ul>
+        </div>
+
+        <div class="row redoUndo">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
+            <input type="color" id="color-picker" value="#000000" style="margin-top: 0;"/>
+            <div>
+              <button class="undo" title="orqaga"><img src="https://cdn-icons-png.flaticon.com/512/109/109618.png" alt=""></button>
+              <button class="redo" title="oldinga"><img src="https://cdn-icons-png.flaticon.com/512/109/109617.png" alt=""></button>
+            </div>
+          </div>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Tozalash</button>
+          <button class="save-image">Saqlash</button>
+        </div>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
