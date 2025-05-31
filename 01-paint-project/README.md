@@ -1,4 +1,4 @@
-# 🖌️ Paint Project | [Demo](https://azykdeveloper.github.io/js-projects/01-paint-project/)
+# 🖌️ Paint Project ( [Demo](https://azykdeveloper.github.io/js-projects/01-paint-project/) )
 
 A simple paint/drawing application built with HTML5 Canvas and JavaScript.
 
