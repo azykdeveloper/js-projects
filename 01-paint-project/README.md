@@ -1,4 +1,4 @@
-# 🖌️ Paint Project
+# 🖌️ Paint Project | [Demo](https://azykdeveloper.github.io/js-projects/01-paint-project/)
 
 A simple paint/drawing application built with HTML5 Canvas and JavaScript.
 
@@ -10,10 +10,6 @@ This project lets you draw freely on the canvas, change colors, adjust brush siz
 - Change brush color
 - Adjust brush size
 - Clear the canvas
-
-## 🚀 Live Demo
-
-[👉 Try it here](https://azykdeveloper.github.io/js-projects/01-paint-project/)
 
 ## 🛠 Built With
 
